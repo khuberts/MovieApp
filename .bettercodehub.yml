@@ -1,0 +1,7 @@
+exclude:
+- /src/main/resources/public/.*
+component_depth: 1
+languages:
+- java
+- javascript
+- script
