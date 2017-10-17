@@ -26,7 +26,7 @@ function handleMovie(type) {
     var obj = {
         movieId: $("#movieId").val(),
         title:       $("#title").val(),
-        isViewed:    false
+        isViewed:    $("#isViewed").val()
     }
 
     var params = {
@@ -50,7 +50,7 @@ function handleMovie(type) {
                 setTimeout(function () {
                     $(rowNode).removeClass('table-success');
                 }, 3000)
-                toastr["success"]('Movie ' + result["name"] + " " + result["surname"] + ' added.')
+                toastr["success"]('Movie ' + result["movieId"] + " " + result["title"] + ' added.')
 
             };
             params.error = function (err) {
@@ -67,7 +67,7 @@ function handleMovie(type) {
                 $("#movieModal").modal('toggle');
                 // Refresh DataTable
                 table.ajax.reload();
-                toastr["success"]('Movie ' + result["name"] + " " + result["surname"] + ' updated.')
+                toastr["success"]('Movie ' + result["movieId"] + " " + result["title"] + ' updated.')
             };
             params.error = function (err) {
                 console.log(err);
@@ -83,7 +83,7 @@ function handleMovie(type) {
                 $("#movieModal").modal('toggle');
                 // Reload DataTable
                 table.ajax.reload();
-                toastr["success"]('Movie ' + result["name"] + " " + result["surname"] + ' deleted.')
+                toastr["success"]('Movie ' + result["movieId"] + " " + result["title"] + ' deleted.')
             };
             params.error = function (err) {
                 console.log(err);
