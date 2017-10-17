@@ -5,8 +5,6 @@ import com.capgemini.MovieApp.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
-
 @RestController
 public class MovieController {
 
@@ -35,9 +33,9 @@ public class MovieController {
     }
 
     /**
-     *  
-     * @param movie
-     * @return
+     *  Function that deletes a movie
+     * @param movie the movie that must be deleted
+     * @return Returns the movie that is deleted
      */
     @RequestMapping(value = "/api/movie", method = RequestMethod.DELETE)
     public Movie deleteMovie(@RequestBody Movie movie) {
@@ -46,6 +44,11 @@ public class MovieController {
         return movie;
     }
 
+    /**
+     * Function to update the movie details
+     * @param movie the updated movie details that have to be saved
+     * @return the updated movie
+     */
     @RequestMapping(value = "/api/movie", method = RequestMethod.PUT)
     public Movie updateMovie(@RequestBody Movie movie) {
 

@@ -12,7 +12,6 @@ public class Movie {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long movieId;
 
-    @Valid
     @Length(max = 30, min = 1, message = "Title must be between 1 and 30 characters.")
     private String title;
 
