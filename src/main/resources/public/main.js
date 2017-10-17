@@ -1,19 +1,7 @@
-$("#hotel_content").load('html/dashboard.html');
+$("#movie_content").load('html/dashboard.html');
 
-$("#button_guest").click(function(){
-    $("#hotel_content").load('html/guest.html');
-});
-
-$("#button_room").click(function(){
-    $("#hotel_content").load('html/room.html');
-});
-
-$("#button_reservation").click(function(){
-    $("#hotel_content").load('html/reservation.html');
-});
-
-$("#button_dashboard").click(function(){
-    $("#hotel_content").load('html/dashboard.html');
+$("#button_movies").click(function(){
+    $("#movie_content").load('html/movies.html');
 });
 
 // Toaster config
